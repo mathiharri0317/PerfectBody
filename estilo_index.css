@@ -63,6 +63,12 @@ h1 {
 .close-btn:hover {
     background-color: #218838;
 }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
 
 /* Diseño responsivo */
 @media (max-width: 768px) {
