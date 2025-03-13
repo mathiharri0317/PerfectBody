@@ -1,4 +1,4 @@
-/* Estilos generales */
+
 body {
     background-color: #dfe0e1;
     margin: 0;
@@ -71,7 +71,7 @@ img {
 }
 .container {
     width: 100%;
-    max-width: 1200px; /* Ajusta esto según el diseño */
+    max-width: 1200px; 
     margin: auto;
     padding: 10px;
 }
@@ -84,5 +84,23 @@ img {
     
     h1 {
         font-size: 22px;
+    }
+}
+
+.navbar {
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 16px; 
+    }
+
+    .navbar-nav {
+        text-align: center; 
+    }
+
+    .nav-item {
+        margin: 5px 0;
     }
 }
