@@ -1,13 +1,11 @@
-function mostrarAlerta(event) {
-    event.preventDefault(); // Detiene el envío del formulario
-    document.getElementById("miModal").style.display = "block";
+function mostrarAlerta() {
+    var modal = new bootstrap.Modal(document.getElementById("miModal"));
+    modal.show();
 }
 
-// Función para cerrar el modal
-function cerrarModal() {
-    document.getElementById("miModal").style.display = "none";
+function redirigir() {
+    window.location.href = "login.html";
 }
-
 
 document.addEventListener("DOMContentLoaded", function() {
     const formulario = document.querySelector("form");
