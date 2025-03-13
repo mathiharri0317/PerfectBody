@@ -1,0 +1,97 @@
+body {
+  background-color: #dfe0e1  ;
+}
+h1{
+color: ##052a56;	
+}
+
+.label1	{
+color: #052a56  ;
+	}
+
+.labe2	{
+color: #e91310;
+	}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid darkred;
+  padding: 10px;
+  .p1 {
+  font-family: "Times New Roman", Times, serif;/* Fondo oscuro detrás del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Botón de cierre */
+.close-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.close-btn:hover {
+    background-color: #218838;
+}
+
+/* Fondo oscuro detrás del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del modal */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* Botón de cierre */
+.close-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.close-btn:hover {
+    background-color: #218838;
+}
