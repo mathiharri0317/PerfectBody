@@ -1,13 +1,13 @@
-function mostrarAlerta() {
-    let modal = document.getElementById("miModal");
-    modal.style.display = "block";
-    return false; // Evita que el formulario se envíe automáticamente
+function mostrarAlerta(event) {
+    event.preventDefault(); // Detiene el envío del formulario
+    document.getElementById("miModal").style.display = "block";
 }
 
+// Función para cerrar el modal
 function cerrarModal() {
-    let modal = document.getElementById("miModal");
-    modal.style.display = "none";
+    document.getElementById("miModal").style.display = "none";
 }
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const formulario = document.querySelector("form");
