@@ -32,3 +32,22 @@
     height: 40px;
     border-radius: 50%;
 }
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .floating-buttons {
+        bottom: 10px;
+        right: 10px;
+        gap: 10px;
+    }
+    
+    .floating-buttons a {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .floating-buttons img {
+        width: 30px;
+        height: 30px;
+    }
+}
