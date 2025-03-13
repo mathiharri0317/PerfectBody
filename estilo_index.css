@@ -69,7 +69,12 @@ img {
     display: block;
     margin: auto;
 }
-
+.container {
+    width: 100%;
+    max-width: 1200px; /* Ajusta esto según el diseño */
+    margin: auto;
+    padding: 10px;
+}
 /* Diseño responsivo */
 @media (max-width: 768px) {
     .center {
