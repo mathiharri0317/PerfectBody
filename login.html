@@ -1,93 +1,121 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Index</title>
+  <title>Login</title>
+
+  <!-- Estilos -->
   <link href="./bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="./estilo_index.css">
   <link rel="stylesheet" type="text/css" href="./flotante.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" type="text/css" href="modal.css">
-<script src="ventana.js" defer></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   
+  <!-- Archivo JS personalizado -->
+  <script src="ventana.js" defer></script>
 </head>
 
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">PERFECT FACE & BODY </a>
-<div class="collapse navbar-collapse">
-<ul class="navbar-nav ms-auto">
-</ul>
-</div>
-</div>
-</nav>  
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">PERFECT FACE & BODY</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto"></ul>
+      </div>
+    </div>
+  </nav>  
 
-  <center><br><br>
-<h1 >Formulario Login</h1>
-<form action="login.html" onsubmit="mostrarAlerta()">
-<label class=".p"><b> Digita el Usuario </label> </b>
-<input type="text" required><br><br>
-<label  for="pwd"><b>Digita Password:</label><b>
-<input type="password" id="pwd" name="pwd" minlength="8" required> <br><br>
-  <input type="submit">
-  <div id="miModal" class="modal">
-    <div class="modal-content">
-        <p>GRACIAS POR INICIAR SESION</p>
-        <button class="close-btn" onclick="cerrarModal()">Aceptar</button>
-    </div>
-</div>
-  <div class="checkbox">
-<label><input type="checkbox" value="" checked>Remember me</label>
-</div>
-</form>
-</center>
-<!-- Carousel -->
-<div id="demo" class="carousel slide" data-bs-ride="carousel">
-<div class="center">
-  <!-- Indicators/dots -->
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
-    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
-  </div>
-  <!-- The slideshow/carousel -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <center>
-     <img src="./cirugia-nariz.jpg" alt="Los Angeles" class="d-block" width="500" height="270">
-     </center>
-    </div>
-    <div class="carousel-item">
-      <center>
-      <img src="./cirugia-hilos.jpeg" alt="Chicago" class="d-block"width="500" height="270"></center>
-    </div>
-    <div class="carousel-item">
-      <center>
-      <img src="./cirugia-marcacion.jpg" alt="New York" class="d-block"width="500" height="270">
-      </center>
+  <center>
+    <br><br>
+    <h1>Formulario Login</h1>
+    
+    <!-- Formulario corregido -->
+    <form onsubmit="return mostrarAlerta(event)">
+      <label for="usuario"><b>Digita el Usuario</b></label>
+      <input type="text" id="usuario" name="usuario" required><br><br>
+
+      <label for="pwd"><b>Digita Password:</b></label>
+      <input type="password" id="pwd" name="pwd" minlength="8" required><br><br>
+
+      <input type="submit" value="Iniciar Sesión">
+
+      <div class="checkbox">
+        <label><input type="checkbox" value="" checked> Remember me</label>
+      </div>
+    </form>
+  </center>
+
+  <!-- Modal corregido -->
+  <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalLabel">Inicio de Sesión</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <p>GRACIAS POR INICIAR SESIÓN</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" onclick="redirigir()">Aceptar</button>
+        </div>
+      </div>
     </div>
   </div>
-  <!-- Left and right controls/icons -->
-  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
-</div>
-<center><br><br>
-  <a href="index.html" class="btn btn-success">Volver al inicio</a>
-  <br><br>
-</center>
-<div class="floating-buttons">
-  <a href="https://wa.me/tu_numero" target="_blank"><img src="./wp.png" alt="WhatsApp"></a>
-  <a href="https://www.facebook.com/tu_pagina" target="_blank"><img src="./fb.png" alt="Facebook"></a>
-  <a href="https://www.instagram.com/tu_perfil" target="_blank"><img src="./in.png" alt="Instagram"></a>
-</div>
-<footer class="bg-dark text-white text-center p-3">
-        <p>© Perfect Face & Body </p>
-</footer>
+
+  <!-- Carousel -->
+  <div id="demo" class="carousel slide" data-bs-ride="carousel">
+    <div class="center">
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- Slideshow -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <center><img src="./cirugia-nariz.jpg" alt="Los Angeles" class="d-block" width="500" height="270"></center>
+        </div>
+        <div class="carousel-item">
+          <center><img src="./cirugia-hilos.jpeg" alt="Chicago" class="d-block" width="500" height="270"></center>
+        </div>
+        <div class="carousel-item">
+          <center><img src="./cirugia-marcacion.jpg" alt="New York" class="d-block" width="500" height="270"></center>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <center>
+    <br><br>
+    <a href="index.html" class="btn btn-success">Volver al inicio</a>
+    <br><br>
+  </center>
+
+  <!-- Botones flotantes -->
+  <div class="floating-buttons">
+    <a href="https://wa.me/tu_numero" target="_blank"><img src="./wp.png" alt="WhatsApp"></a>
+    <a href="https://www.facebook.com/tu_pagina" target="_blank"><img src="./fb.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/tu_perfil" target="_blank"><img src="./in.png" alt="Instagram"></a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center p-3">
+    <p>© Perfect Face & Body</p>
+  </footer>
 </body>
 </html>
