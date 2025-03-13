@@ -1,4 +1,3 @@
-
 function mostrarAlerta() {
     let modal = document.getElementById("miModal");
     modal.style.display = "block";
@@ -7,7 +6,9 @@ function mostrarAlerta() {
 
 function cerrarModal() {
     let modal = document.getElementById("miModal");
-    m
+    modal.style.display = "none";
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const formulario = document.querySelector("form");
     if (formulario) {
