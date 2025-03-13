@@ -1,25 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const modal = document.getElementById("miModal");
-    const closeModalBtn = document.querySelector(".close-btn");
+document.addEventListener("DOMContentLoaded", function () {
     const formulario = document.querySelector("form");
+    const modal = new bootstrap.Modal(document.getElementById("miModal"));
+    
+    // Capturar el botón "Aceptar" dentro del modal
+    const botonAceptar = document.getElementById("botonAceptar");
 
-    function mostrarAlerta(event) {
-        event.preventDefault(); // Evita que la página se recargue
-        modal.style.display = "block";
-    }
+    formulario.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita que el formulario recargue la página
+        modal.show(); // Muestra la ventana emergente
+    });
 
-    function cerrarModal() {
-        modal.style.display = "none";
-    }
-
-    formulario.addEventListener("submit", mostrarAlerta);
-    closeModalBtn.addEventListener("click", cerrarModal);
-
-    // Cierra el modal si se hace clic fuera de él
-    window.addEventListener("click", function(event) {
-        if (event.target === modal) {
-            cerrarModal();
-        }
+    botonAceptar.addEventListener("click", function () {
+        window.location.href = "index.html"; // Redirige al index al hacer clic en "Aceptar"
     });
 });
-
