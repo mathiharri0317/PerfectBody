@@ -1,17 +1,13 @@
 
 function mostrarAlerta(event) {
-    event.preventDefault();
+    event.preventDefault(); // Evita que el formulario recargue la página
+
     var modal = new bootstrap.Modal(document.getElementById("miModal"));
     modal.show();
     
-    document.getElementById("modalAceptar").addEventListener("click", function() {
-        window.location.href = "login.html";
-    });
+    return false; // Evita que el formulario siga su flujo normal
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    const formulario = document.querySelector("form");
-    if (formulario) {
-        formulario.addEventListener("submit", mostrarAlerta);
-    }
-});
+function redirigir() {
+    window.location.href = "login.html"; // Redirige después de cerrar el modal
+}
